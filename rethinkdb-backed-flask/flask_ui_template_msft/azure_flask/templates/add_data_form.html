@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+<div id="contact-form">
+   <form method="post" action="{{ url_for('add_fused_news_data') }}">
+    <div>
+      <label for="headline">
+        <span class="required">Headline: *</span>
+        <input type="text" id="headline" name="headline" value="" placeholder="Headline" tabindex="2" required="required" />
+      </label>
+    </div>
+    <div>
+      <label for="url">
+        <span class="required">URL: *</span>
+        <input type="text" id="url" name="url" value="" placeholder="URL" tabindex="2" required="required" />
+      </label>
+    </div>
+    <div>
+      <button name="submit" type="submit" id="submit" >POST</button>
+    </div>
+   </form>
+</div>
+
+{% endblock %}

@@ -1,8 +1,10 @@
+# Do all the importing.
 import json
 import rethinkdb as r
 from flask import Flask, g, render_template, abort, request
 
 from rethinkdb.errors import RqlDriverError
+
 
 # Configure the connection
 RDB_HOST = 'localhost'

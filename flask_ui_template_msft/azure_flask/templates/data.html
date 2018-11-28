@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<h1>First An Image:</h1>
+    <img src="{{ url_for('image_render', some_image= image_name) }}" alt="Some Image">
+
+<h1>All The Data!</h1>
+
+{% for news_item in news_data %}
+<div><a href="{{ news_item.url }}">{{ news_item.headline }}</a>
+    <p> Submitted on {{ news_item.date_submitted }} </p>
+</div>
+{% endfor %}
+{% endblock %}

@@ -84,7 +84,7 @@ def image_render(some_image):
 def get_fused_news_data():
     return r.get("http://localhost:5001/api/v1/fusednews")
 
-
+# This is the function I added to POST Data
 @app.route('/add_fused_news_data',methods=["POST"])
 def add_fused_news_data():
     fused_news_item = {'headline':request.form['headline'],'url':request.form['url']}
